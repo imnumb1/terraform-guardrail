@@ -105,6 +105,15 @@ streamlit run streamlit_app.py
 3. Set the main file path to `streamlit_app.py`.
 4. Deploy (Streamlit will install from `requirements.txt`).
 
+## Release Links
+
+- PyPI: https://pypi.org/project/terraform-guardrail/
+- GitHub Releases: https://github.com/Huzefaaa2/terraform-guardrail/releases
+
+## Deployment Guide
+
+See `docs/streamlit_cloud.md` for a detailed Streamlit Cloud walkthrough.
+
 ## MCP tools (current)
 
 - `scan_terraform`: Run compliance checks over a path and optional state file.
