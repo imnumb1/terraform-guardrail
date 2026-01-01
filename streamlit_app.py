@@ -34,6 +34,10 @@ with st.sidebar:
     st.markdown(f"- [Wiki Docs]({WIKI_URL})")
     st.markdown(f"- [Follow on LinkedIn]({LINKEDIN_URL})")
     st.divider()
+    st.subheader("Install")
+    st.code("pip install terraform-guardrail")
+    st.markdown("PyPI: https://pypi.org/project/terraform-guardrail/")
+    st.divider()
     st.subheader("How to use")
     st.markdown(
         "\n".join(
