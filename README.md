@@ -1,5 +1,7 @@
 # Terraform Guardrail MCP
 
+[![CI](https://github.com/Huzefaaa2/terraform-guardrail/actions/workflows/ci.yml/badge.svg)](https://github.com/Huzefaaa2/terraform-guardrail/actions/workflows/ci.yml)
+
 Terraform Guardrail MCP is a Python-based MCP server + CLI + minimal web UI that helps AI assistants
 and platform teams generate valid Terraform code and enforce ephemeral-values compliance. It targets
 multi-cloud teams and focuses on reducing configuration drift, secret leakage, and invalid provider
@@ -121,6 +123,20 @@ See `docs/streamlit_cloud.md` for a detailed Streamlit Cloud walkthrough.
 - Commit changes and push to `main`.
 - Create and push a tag: `git tag -a vX.Y.Z -m "vX.Y.Z"` then `git push origin vX.Y.Z`.
 - Confirm GitHub Actions release workflow completed successfully.
+
+## Changelog Automation
+
+This repo uses `git-cliff` to generate `CHANGELOG.md`.
+
+```bash
+git cliff -o CHANGELOG.md
+```
+
+Or run:
+
+```bash
+make changelog
+```
 
 ## MCP tools (current)
 
