@@ -11,5 +11,6 @@ compliance rules, and deployment guides for the CLI, MCP server, and Streamlit U
 - [Compliance Rules](Compliance-Rules.md)
 - [Streamlit Deployment](Streamlit-Deployment.md)
 - [Live Streamlit App](https://terraform-guardrail.streamlit.app/)
+- [PyPI Package](https://pypi.org/project/terraform-guardrail/)
 - [Release Process](Release-Process.md)
 - [Diagrams](Diagrams.md)

@@ -78,6 +78,14 @@ terraform-guardrail mcp
 terraform-guardrail web
 ```
 
+## Install from PyPI
+
+```bash
+pip install terraform-guardrail
+```
+
+PyPI: https://pypi.org/project/terraform-guardrail/ (latest: 0.2.3)
+
 ## CLI examples
 
 ```bash

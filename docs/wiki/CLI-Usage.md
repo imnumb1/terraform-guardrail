@@ -8,6 +8,14 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
+## Install from PyPI
+
+```bash
+pip install terraform-guardrail
+```
+
+PyPI: https://pypi.org/project/terraform-guardrail/ (latest: 0.2.3)
+
 ## Scan
 
 ```bash
