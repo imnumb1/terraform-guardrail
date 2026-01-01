@@ -24,7 +24,8 @@ def _tool_scan_terraform(args: dict[str, Any]) -> dict[str, Any]:
     if not path:
         raise ValueError("path is required")
     state_path = args.get("state_path")
-    report = scan_path(path=path, state_path=state_path)
+    use_schema = args.get("use_schema", False)
+    report = scan_path(path=path, state_path=state_path, use_schema=use_schema)
     return report.model_dump()
 
 
@@ -55,6 +56,7 @@ TOOLS = [
             "properties": {
                 "path": {"type": "string"},
                 "state_path": {"type": "string"},
+                "use_schema": {"type": "boolean"},
             },
             "required": ["path"],
         },

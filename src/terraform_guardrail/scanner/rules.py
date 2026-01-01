@@ -15,4 +15,5 @@ RULES = {
     "TG002": "Hardcoded secret in Terraform config",
     "TG003": "Sensitive-looking value stored in Terraform state",
     "TG004": "HCL parse error",
+    "TG005": "Attribute not found in provider schema",
 }

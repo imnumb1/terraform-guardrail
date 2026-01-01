@@ -8,15 +8,32 @@ import hcl2
 
 from terraform_guardrail.scanner.models import Finding, ScanReport, ScanSummary
 from terraform_guardrail.scanner.rules import RULES, SENSITIVE_ASSIGN_RE, SENSITIVE_NAME_RE
+from terraform_guardrail.schema import (
+    SchemaError,
+    allowed_keys,
+    iter_resource_blocks,
+    load_provider_schema,
+)
 
 TERRAFORM_EXTS = {".tf", ".tfvars", ".hcl"}
 
 
-def scan_path(path: Path | str, state_path: Path | str | None = None) -> ScanReport:
+def scan_path(
+    path: Path | str,
+    state_path: Path | str | None = None,
+    use_schema: bool = False,
+) -> ScanReport:
     path = Path(path)
     state_path = Path(state_path) if state_path else None
     if not path.exists():
         raise FileNotFoundError(f"Path not found: {path}")
+    schema = None
+    if use_schema:
+        workdir = path if path.is_dir() else path.parent
+        try:
+            schema = load_provider_schema(workdir)
+        except SchemaError as exc:
+            raise RuntimeError(f"Schema load failed: {exc}") from exc
     report = ScanReport.empty(path)
     findings: list[Finding] = []
     scanned_files = 0
@@ -26,7 +43,7 @@ def scan_path(path: Path | str, state_path: Path | str | None = None) -> ScanRep
         if file_path.suffix not in TERRAFORM_EXTS:
             continue
         scanned_files += 1
-        findings.extend(_scan_hcl_file(file_path))
+        findings.extend(_scan_hcl_file(file_path, schema))
 
     if state_path:
         if not state_path.exists():
@@ -44,7 +61,7 @@ def _expand_paths(path: Path) -> Iterable[Path]:
     return [path]
 
 
-def _scan_hcl_file(path: Path) -> list[Finding]:
+def _scan_hcl_file(path: Path, schema: dict | None) -> list[Finding]:
     findings: list[Finding] = []
     content = path.read_text(encoding="utf-8")
 
@@ -105,6 +122,9 @@ def _scan_hcl_file(path: Path) -> list[Finding]:
                     )
                 )
 
+    if schema:
+        findings.extend(_schema_findings(data, schema, path))
+
     return findings
 
 
@@ -146,6 +166,29 @@ def _scan_state_file(path: Path) -> list[Finding]:
                         )
                     )
 
+    return findings
+
+
+def _schema_findings(hcl_data: dict, schema: dict, path: Path) -> list[Finding]:
+    findings: list[Finding] = []
+    for resource_type, attributes in iter_resource_blocks(hcl_data):
+        allowed = allowed_keys(schema, resource_type)
+        if not allowed:
+            continue
+        for key in attributes.keys():
+            if key in allowed:
+                continue
+            findings.append(
+                Finding(
+                    rule_id="TG005",
+                    severity="medium",
+                    message=f"{RULES['TG005']}: {resource_type}.{key}",
+                    path=str(path),
+                    detail={
+                        "recommendation": "Verify the attribute name against provider schema.",
+                    },
+                )
+            )
     return findings
 
 

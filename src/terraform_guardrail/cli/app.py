@@ -22,9 +22,10 @@ def scan(
     path: Annotated[Path, typer.Argument(help="Path to a Terraform file or directory.")],
     state: Annotated[Path | None, typer.Option(help="Optional path to a .tfstate file.")] = None,
     format: Annotated[str, typer.Option(help="pretty or json")] = "pretty",
+    schema: Annotated[bool, typer.Option(help="Enable schema-aware validation")] = False,
 ) -> None:
     try:
-        report = scan_path(path=path, state_path=state)
+        report = scan_path(path=path, state_path=state, use_schema=schema)
     except Exception as exc:  # noqa: BLE001
         console.print(f"Scan failed: {exc}")
         raise typer.Exit(code=1) from exc

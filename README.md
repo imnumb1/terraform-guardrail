@@ -48,6 +48,9 @@ terraform-guardrail scan ./examples --format json
 
 # scan state files too
 terraform-guardrail scan ./examples --state ./examples/sample.tfstate
+
+# enable schema-aware validation (requires terraform CLI + initialized workspace)
+terraform-guardrail scan ./examples --schema
 ```
 
 ## Web UI
