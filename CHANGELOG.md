@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.4] - 2026-01-01
+
+### Added
+- Multi-file upload (1–10 files) in Streamlit.
+- CSV export with `file_name` and `scanned_at` fields.
+- Supported provider list in UI and wiki.
+- Streamlit sidebar install snippet and PyPI link.
+
+### Changed
+- Findings table shows file metadata by default.
+
 ## [0.2.2] - 2026-01-01
 
 ### Added

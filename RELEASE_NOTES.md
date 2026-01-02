@@ -1,12 +1,14 @@
-# v0.2.2
+# v0.2.4
 
 ## Highlights
-- Streamlit app link visible on PyPI docs.
-- Added diagram links for PyPI readers.
+- Streamlit multi-file upload (up to 10 files) with CSV export.
+- Provider coverage expanded and documented across UI and wiki.
 
 ## Added
-- Streamlit live app URL in README and wiki.
-- PyPI-friendly diagram links.
+- CSV export includes `file_name` and `scanned_at`.
+- Streamlit sidebar install snippet and resource links.
+- Supported providers listed in UI and wiki.
 
 ## Changed
-- Version bump to `0.2.2`.
+- Findings table shows file metadata by default.
+- Version bump to `0.2.4`.
