@@ -115,7 +115,15 @@ if st.button("Scan"):
 
         st.subheader("Findings")
         if all_findings:
-            columns = ["file_name", "scanned_at", "rule_id", "severity", "message", "path", "detail"]
+            columns = [
+                "file_name",
+                "scanned_at",
+                "rule_id",
+                "severity",
+                "message",
+                "path",
+                "detail",
+            ]
             table = [{key: finding.get(key) for key in columns} for finding in all_findings]
             st.dataframe(table, use_container_width=True)
         else:
@@ -124,7 +132,15 @@ if st.button("Scan"):
         output = StringIO()
         writer = csv.DictWriter(
             output,
-            fieldnames=["file_name", "scanned_at", "rule_id", "severity", "message", "path", "detail"],
+            fieldnames=[
+                "file_name",
+                "scanned_at",
+                "rule_id",
+                "severity",
+                "message",
+                "path",
+                "detail",
+            ],
         )
         writer.writeheader()
         for finding in all_findings:
