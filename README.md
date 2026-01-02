@@ -54,7 +54,7 @@ flowchart TB
 
 - Scan `.tf` and `.tfvars` for sensitive values and missing `ephemeral = true`
 - Scan `.tfstate` for leaked sensitive values
-- Provider metadata retrieval for AWS and Azure via Terraform Registry
+- Provider metadata retrieval for AWS, Azure, GCP, Kubernetes, Helm, OCI, Vault, Alicloud, and vSphere via Terraform Registry
 - MCP server with `scan_terraform` and `get_provider_metadata` tools
 - Minimal web UI for uploading a file and viewing the report
 

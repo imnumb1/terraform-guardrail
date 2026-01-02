@@ -8,6 +8,15 @@ PROVIDER_MAP = {
     "aws": ("hashicorp", "aws"),
     "azure": ("hashicorp", "azurerm"),
     "azurerm": ("hashicorp", "azurerm"),
+    "gcp": ("hashicorp", "google"),
+    "google": ("hashicorp", "google"),
+    "kubernetes": ("hashicorp", "kubernetes"),
+    "helm": ("hashicorp", "helm"),
+    "oci": ("hashicorp", "oci"),
+    "vault": ("hashicorp", "vault"),
+    "alicloud": ("hashicorp", "alicloud"),
+    "vmware": ("hashicorp", "vsphere"),
+    "vsphere": ("hashicorp", "vsphere"),
 }
 
 

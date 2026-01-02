@@ -68,7 +68,23 @@ TOOLS = [
         input_schema={
             "type": "object",
             "properties": {
-                "provider": {"type": "string", "enum": ["aws", "azure", "azurerm"]}
+                "provider": {
+                    "type": "string",
+                    "enum": [
+                        "aws",
+                        "azure",
+                        "azurerm",
+                        "gcp",
+                        "google",
+                        "kubernetes",
+                        "helm",
+                        "oci",
+                        "vault",
+                        "alicloud",
+                        "vmware",
+                        "vsphere",
+                    ],
+                }
             },
         },
         handler=_tool_provider_metadata,
