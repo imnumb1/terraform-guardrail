@@ -74,7 +74,7 @@ terraform-guardrail web
 pip install terraform-guardrail
 ```
 
-PyPI: https://pypi.org/project/terraform-guardrail/ (latest: 0.2.4)
+PyPI: https://pypi.org/project/terraform-guardrail/ (latest: 0.2.5)
 
 ## CLI examples
 

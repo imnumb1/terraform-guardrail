@@ -15,3 +15,16 @@ compliance rules, and deployment guides for the CLI, MCP server, and Streamlit U
 - [Release Process](Release-Process.md)
 - [Diagrams](Diagrams.md)
 - Supported providers: AWS, Azure, GCP, Kubernetes, Helm, OCI, Vault, Alicloud, vSphere
+ - Latest version: 0.2.5
+
+## Feature Matrix
+
+| Area | CLI | Web UI / Streamlit |
+| --- | --- | --- |
+| Config scan (`.tf`, `.tfvars`, `.hcl`) | Yes | Yes |
+| State leak scan (`.tfstate`) | Yes | Yes |
+| Schema-aware validation | Yes | Yes |
+| CSV export | No | Yes |
+| Provider metadata | Yes | Yes |
+| Snippet generation | Yes | No |
+| Multi-file scan | Yes (directory) | Yes (upload up to 10) |
